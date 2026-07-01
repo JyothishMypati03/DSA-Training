@@ -6,14 +6,20 @@ public class Main {
 
         DoublyLinkedList<Integer> list = new DoublyLinkedList<>();
 
+        // Initial List
         list.append(56);
-        list.append(30);
         list.append(70);
 
-        System.out.println("Forward Traversal:");
+        System.out.println("Before Insertion:");
         list.printForward();
 
-        System.out.println("Backward Traversal:");
+        // Insert 30 after 56
+        list.insertAfter(56, 30);
+
+        System.out.println("\nAfter Insertion:");
+        list.printForward();
+
+        System.out.println("\nBackward Traversal:");
         list.printBackward();
     }
 }

@@ -9,24 +9,51 @@ public class DoublyLinkedList<T> {
 
         Node<T> newNode = new Node<>(data);
 
-        // If list is empty
         if (head == null) {
             head = newNode;
             return;
         }
 
-        // Traverse to the last node
         Node<T> temp = head;
 
         while (temp.next != null) {
             temp = temp.next;
         }
 
-        // Link last node with new node
         temp.next = newNode;
         newNode.prev = temp;
     }
 
+    // Insert newData after afterData
+    public void insertAfter(T afterData, T newData) {
+
+        Node<T> temp = head;
+
+        // Search for the node
+        while (temp != null && !temp.data.equals(afterData)) {
+            temp = temp.next;
+        }
+
+        // Data not found
+        if (temp == null) {
+            System.out.println(afterData + " not found.");
+            return;
+        }
+
+        Node<T> newNode = new Node<>(newData);
+
+        // Connect new node
+        newNode.next = temp.next;
+        newNode.prev = temp;
+
+        // If next node exists, update its prev reference
+        if (temp.next != null) {
+            temp.next.prev = newNode;
+        }
+
+        // Update current node's next
+        temp.next = newNode;
+    }
 
     // Print Forward
     public void printForward() {
@@ -50,18 +77,15 @@ public class DoublyLinkedList<T> {
     // Print Backward
     public void printBackward() {
 
-        if (head == null) {
+        if (head == null)
             return;
-        }
 
         Node<T> temp = head;
 
-        // Go to last node
         while (temp.next != null) {
             temp = temp.next;
         }
 
-        // Traverse backward
         while (temp != null) {
 
             System.out.print(temp.data);

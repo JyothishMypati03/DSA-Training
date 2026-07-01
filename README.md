@@ -1,15 +1,23 @@
-# Doubly Linked List Using Java Generics
+# Insert a Node Between Two Nodes (Doubly Linked List)
 
 ## Description
 
-This project demonstrates the implementation of a **Doubly Linked List** from scratch using **Java Generics**. Each node stores data along with references to both the previous and next nodes, allowing traversal in both forward and backward directions.
+This project demonstrates how to insert a new node between two existing nodes in a **Doubly Linked List** using Java Generics.
+
+Initially, the linked list contains the nodes **56** and **70**. The node **30** is inserted between them, resulting in the sequence **56 ⇄ 30 ⇄ 70**.
 
 ## Objective
 
-- Understand the working of a Doubly Linked List.
-- Implement a custom Node class using Java Generics.
-- Append nodes at the end of the list.
+- Understand insertion in a Doubly Linked List.
+- Insert a node between two existing nodes.
+- Maintain both `prev` and `next` references.
 - Traverse the list in both forward and backward directions.
+
+## Technologies Used
+
+- Java
+- Java Generics
+- Object-Oriented Programming (OOP)
 
 ## Project Structure
 
@@ -21,34 +29,31 @@ src
     └── Main.java
 ```
 
-## Technologies Used
-
-- Java
-- Java Generics
-- Object-Oriented Programming (OOP)
-
 ## Features
 
 - Generic Node implementation
-- Append elements to the end of the list
+- Append nodes
+- Insert a node after a specified node
 - Forward traversal
 - Backward traversal
-- Custom Doubly Linked List implementation
 
 ## Sample Input
 
 ```java
 list.append(56);
-list.append(30);
 list.append(70);
+
+list.insertAfter(56, 30);
 ```
 
 ## Output
 
 ```
-Forward Traversal:
+Before Insertion:
+56 <-> 70
+
+After Insertion:
 56 <-> 30 <-> 70
 
 Backward Traversal:
 70 <-> 30 <-> 56
-```
