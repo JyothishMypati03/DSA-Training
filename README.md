@@ -1,17 +1,15 @@
-# Insert a Node Between Two Nodes (Doubly Linked List)
+# Delete the First Node (Pop Operation) in Doubly Linked List
 
 ## Description
 
-This project demonstrates how to insert a new node between two existing nodes in a **Doubly Linked List** using Java Generics.
-
-Initially, the linked list contains the nodes **56** and **70**. The node **30** is inserted between them, resulting in the sequence **56 ⇄ 30 ⇄ 70**.
+This project demonstrates how to delete the **first node (Head)** from a **Doubly Linked List** using Java Generics. After deleting the first node, the next node becomes the new head of the list.
 
 ## Objective
 
-- Understand insertion in a Doubly Linked List.
-- Insert a node between two existing nodes.
-- Maintain both `prev` and `next` references.
-- Traverse the list in both forward and backward directions.
+- Understand the Pop operation in a Doubly Linked List.
+- Delete the first node from the list.
+- Update the Head node.
+- Maintain the `prev` and `next` references correctly.
 
 ## Technologies Used
 
@@ -32,8 +30,8 @@ src
 ## Features
 
 - Generic Node implementation
-- Append nodes
-- Insert a node after a specified node
+- Append nodes to the list
+- Delete the first node (Pop)
 - Forward traversal
 - Backward traversal
 
@@ -41,19 +39,20 @@ src
 
 ```java
 list.append(56);
+list.append(30);
 list.append(70);
 
-list.insertAfter(56, 30);
+list.pop();
 ```
 
 ## Output
 
 ```
-Before Insertion:
-56 <-> 70
-
-After Insertion:
+Before Deleting First Node:
 56 <-> 30 <-> 70
 
+After Deleting First Node:
+30 <-> 70
+
 Backward Traversal:
-70 <-> 30 <-> 56
+70 <-> 30

@@ -55,6 +55,20 @@ public class DoublyLinkedList<T> {
         temp.next = newNode;
     }
 
+    public void pop() {
+
+        if (head == null) {
+            System.out.println("Linked List is Empty.");
+            return;
+        }
+
+        head = head.next;
+
+        if (head != null) {
+            head.prev = null;
+        }
+    }
+
     // Print Forward
     public void printForward() {
 

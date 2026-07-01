@@ -10,6 +10,8 @@ public class Main {
         list.append(56);
         list.append(70);
 
+        list.pop();
+
         System.out.println("Before Insertion:");
         list.printForward();
 
