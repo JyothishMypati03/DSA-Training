@@ -94,6 +94,23 @@ public class DoublyLinkedList<T> {
         temp.prev.next = null;
     }
 
+    // Search a node
+    public boolean search(T key) {
+
+        Node<T> temp = head;
+
+        while (temp != null) {
+
+            if (temp.data.equals(key)) {
+                return true;
+            }
+
+            temp = temp.next;
+        }
+
+        return false;
+    }
+
     // Print Forward
     public void printForward() {
 

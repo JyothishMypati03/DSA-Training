@@ -1,20 +1,21 @@
-#  Delete the Last Node (Pop Last Operation) in Doubly Linked List
+# Search a Node in Doubly Linked List
 
 ## Description
 
-This project demonstrates how to delete the **last node (tail)** from a **Doubly Linked List** using Java Generics. After deleting the last node, the previous node becomes the new tail of the list.
+This project demonstrates how to search for a node in a **Doubly Linked List** using Java Generics. The linked list is traversed from the head node to find the specified value.
 
 ## Objective
 
-- Understand the Pop Last operation in a Doubly Linked List.
-- Delete the last node from the list.
-- Update the new tail node.
-- Maintain both `prev` and `next` references correctly.
+- Understand the search operation in a Doubly Linked List.
+- Traverse the list to find a specific node.
+- Return whether the node is present or not.
+- Verify the search operation using JUnit test cases.
 
 ## Technologies Used
 
 - Java
 - Java Generics
+- JUnit 5
 - Object-Oriented Programming (OOP)
 
 ## Project Structure
@@ -24,6 +25,7 @@ src
 └── com.bridgelabz.datastructures.doublylinkedlist
     ├── Node.java
     ├── DoublyLinkedList.java
+    ├── DoublyLinkedListTest.java
     └── Main.java
 ```
 
@@ -31,9 +33,9 @@ src
 
 - Generic Node implementation
 - Append nodes to the list
-- Delete the last node (Pop Last)
+- Search node by value
 - Forward traversal
-- Backward traversal
+- JUnit test cases
 
 ## Sample Input
 
@@ -42,17 +44,11 @@ list.append(56);
 list.append(30);
 list.append(70);
 
-list.popLast();
+list.search(30);
 ```
 
 ## Output
 
 ```
-Before Deleting Last Node:
-56 <-> 30 <-> 70
-
-After Deleting Last Node:
-56 <-> 30
-
-Backward Traversal:
-30 <-> 56
+Node with value 30 found.
+```

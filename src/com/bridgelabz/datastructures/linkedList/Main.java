@@ -14,6 +14,12 @@ public class Main {
 
         list.popLast();
 
+        if (list.search(30)) {
+            System.out.println("Node with value 30 found.");
+        } else {
+            System.out.println("Node not found.");
+        }
+
         System.out.println("Before Insertion:");
         list.printForward();
 
@@ -25,5 +31,6 @@ public class Main {
 
         System.out.println("\nBackward Traversal:");
         list.printBackward();
+
     }
 }
