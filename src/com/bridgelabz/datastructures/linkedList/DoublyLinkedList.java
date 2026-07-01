@@ -112,6 +112,59 @@ public class DoublyLinkedList<T> {
         return false;
     }
 
+    // Delete a node
+    public void delete(T key) {
+
+        Node<T> temp = head;
+
+        while (temp != null && !temp.data.equals(key)) {
+            temp = temp.next;
+        }
+
+        if (temp == null) {
+            System.out.println("Node not found.");
+            return;
+        }
+
+        // If deleting first node
+        if (temp == head) {
+
+            head = head.next;
+
+            if (head != null) {
+                head.prev = null;
+            }
+
+            return;
+        }
+
+        // Update previous node
+        temp.prev.next = temp.next;
+
+        // Update next node
+        if (temp.next != null) {
+            temp.next.prev = temp.prev;
+        }
+    }
+
+    // Size of Linked List
+    public int size() {
+
+        int count = 0;
+
+        Node<T> temp = head;
+
+        while (temp != null) {
+
+            count++;
+
+            temp = temp.next;
+        }
+
+        return count;
+    }
+
+
     // Print Forward
     public void printForward() {
 

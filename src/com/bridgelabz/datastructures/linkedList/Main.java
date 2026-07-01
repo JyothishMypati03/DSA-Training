@@ -31,5 +31,25 @@ public class Main {
 
         System.out.println("\nBackward Traversal:");
         list.printBackward();
+
+        list.append(56);
+        list.append(30);
+        list.append(40);
+        list.append(70);
+
+        System.out.println("Before Deletion:");
+        list.printForward();
+
+        if (list.search(40)) {
+
+            System.out.println("\nNode 40 Found.");
+
+            list.delete(40);
+        }
+
+        System.out.println("\nAfter Deletion:");
+        list.printForward();
+
+        System.out.println("\nSize of Linked List: " + list.size());
     }
 }
