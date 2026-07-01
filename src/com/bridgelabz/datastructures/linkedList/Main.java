@@ -51,5 +51,14 @@ public class Main {
         list.printForward();
 
         System.out.println("\nSize of Linked List: " + list.size());
+
+        list.add(56);
+        list.add(30);
+        list.add(40);
+        list.add(70);
+
+        System.out.println("Sorted Linked List:");
+
+        list.print();
     }
 }

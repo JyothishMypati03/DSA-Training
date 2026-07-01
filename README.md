@@ -1,65 +1,52 @@
-# Delete a Node and Find the Size of Doubly Linked List
+#  Create a Sorted Linked List
 
 ## Description
 
-This project demonstrates how to delete a specific node from a **Doubly Linked List** using Java Generics. The linked list is searched to find the node with value **40**, the node is deleted, and the total number of nodes in the linked list is displayed using the `size()` method.
+This project demonstrates the implementation of a **Sorted Linked List** using Java Generics. The linked list automatically inserts each element in **ascending order** during the insertion operation.
 
 ## Objective
 
-- Understand node deletion in a Doubly Linked List.
-- Search for a node before deleting it.
-- Delete the specified node while maintaining both `prev` and `next` references.
-- Calculate the size of the linked list.
-- Verify the implementation using JUnit test cases.
+- Understand the concept of a Sorted Linked List.
+- Insert elements in ascending order automatically.
+- Use Java Generics with the `Comparable` interface.
+- Maintain the sorted order after every insertion.
 
 ## Technologies Used
 
 - Java
 - Java Generics
-- JUnit 5
+- Comparable Interface
 - Object-Oriented Programming (OOP)
 
 ## Project Structure
 
 ```
 src
-└── com.bridgelabz.datastructures.doublylinkedlist
+└── com.bridgelabz.datastructures.sortedlinkedlist
     ├── Node.java
-    ├── DoublyLinkedList.java
-    ├── DoublyLinkedListTest.java
+    ├── SortedLinkedList.java
     └── Main.java
 ```
 
 ## Features
 
 - Generic Node implementation
-- Append nodes
-- Search node by value
-- Delete a specified node
-- Calculate linked list size
-- Forward traversal
-- JUnit test cases
+- Sorted insertion
+- Automatic ascending order
+- Linked List traversal
+- Custom Sorted Linked List implementation
 
 ## Sample Input
 
 ```java
-list.append(56);
-list.append(30);
-list.append(40);
-list.append(70);
-
-list.delete(40);
-
-System.out.println(list.size());
+list.add(56);
+list.add(30);
+list.add(40);
+list.add(70);
 ```
 
 ## Output
 
 ```
-Before Deletion:
-56 <-> 30 <-> 40 <-> 70
-
-After Deletion:
-56 <-> 30 <-> 70
-
-Size of Linked List: 3
+Sorted Linked List:
+30 -> 40 -> 56 -> 70

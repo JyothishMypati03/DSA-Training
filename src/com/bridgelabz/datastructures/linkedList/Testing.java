@@ -35,8 +35,4 @@ public class Testing {
 
         assertEquals(3, list.size());
     }
-
-
-
-
 }

@@ -1,6 +1,6 @@
 package com.bridgelabz.datastructures.linkedList;
 
-public class DoublyLinkedList<T> {
+public class DoublyLinkedList<T extends Comparable<T>> {
 
     private Node<T> head;
 
@@ -162,6 +162,56 @@ public class DoublyLinkedList<T> {
         }
 
         return count;
+    }
+    // Insert in ascending order
+    public void add(T data) {
+
+        Node<T> newNode = new Node<>(data);
+
+        // Empty list
+        if (head == null) {
+            head = newNode;
+            return;
+        }
+
+        // Insert at beginning
+        if (data.compareTo(head.data) < 0) {
+            newNode.next = head;
+            head = newNode;
+            return;
+        }
+
+        // Traverse to find correct position
+        Node<T> temp = head;
+
+        while (temp.next != null &&
+                data.compareTo(temp.next.data) > 0) {
+
+            temp = temp.next;
+        }
+
+        // Insert node
+        newNode.next = temp.next;
+        temp.next = newNode;
+    }
+
+    // Display Linked List
+    public void print() {
+
+        Node<T> temp = head;
+
+        while (temp != null) {
+
+            System.out.print(temp.data);
+
+            if (temp.next != null) {
+                System.out.print(" -> ");
+            }
+
+            temp = temp.next;
+        }
+
+        System.out.println();
     }
 
 
