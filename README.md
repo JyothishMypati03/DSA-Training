@@ -2,14 +2,24 @@
 
 ## Description
 
-This project demonstrates the implementation of a **Doubly Linked List** from scratch using Java Generics. Each node stores data along with references to both the previous and next nodes, allowing traversal in both forward and backward directions.
+This project demonstrates the implementation of a **Doubly Linked List** from scratch using **Java Generics**. Each node stores data along with references to both the previous and next nodes, allowing traversal in both forward and backward directions.
 
 ## Objective
 
-- Understand the concept of a Doubly Linked List.
-- Implement a custom Doubly Linked List using Java.
-- Insert nodes at the beginning of the list.
+- Understand the working of a Doubly Linked List.
+- Implement a custom Node class using Java Generics.
+- Append nodes at the end of the list.
 - Traverse the list in both forward and backward directions.
+
+## Project Structure
+
+```
+src
+└── com.bridgelabz.datastructures.doublylinkedlist
+    ├── Node.java
+    ├── DoublyLinkedList.java
+    └── Main.java
+```
 
 ## Technologies Used
 
@@ -17,30 +27,20 @@ This project demonstrates the implementation of a **Doubly Linked List** from sc
 - Java Generics
 - Object-Oriented Programming (OOP)
 
-## Project Structure
-
-```
-src
-└── com.bridgelabz.datastructures.linkedList
-    ├── Node.java
-    ├── DoublyLinkedList.java
-    └── Main.java
-```
-
 ## Features
 
-- Create a Doubly Linked List
-- Add nodes at the beginning
+- Generic Node implementation
+- Append elements to the end of the list
 - Forward traversal
 - Backward traversal
-- Generic implementation
+- Custom Doubly Linked List implementation
 
 ## Sample Input
 
 ```java
-list.add(70);
-list.add(30);
-list.add(56);
+list.append(56);
+list.append(30);
+list.append(70);
 ```
 
 ## Output
@@ -51,3 +51,4 @@ Forward Traversal:
 
 Backward Traversal:
 70 <-> 30 <-> 56
+```

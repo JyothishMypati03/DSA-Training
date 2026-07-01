@@ -4,22 +4,31 @@ public class DoublyLinkedList<T> {
 
     private Node<T> head;
 
-    // Add node at the beginning
-    public void add(T data) {
+    // Append node at the end
+    public void append(T data) {
 
         Node<T> newNode = new Node<>(data);
 
-        // If list is not empty
-        if (head != null) {
-            newNode.next = head;
-            head.prev = newNode;
+        // If list is empty
+        if (head == null) {
+            head = newNode;
+            return;
         }
 
-        // Move head to new node
-        head = newNode;
+        // Traverse to the last node
+        Node<T> temp = head;
+
+        while (temp.next != null) {
+            temp = temp.next;
+        }
+
+        // Link last node with new node
+        temp.next = newNode;
+        newNode.prev = temp;
     }
 
-    // Print from first to last
+
+    // Print Forward
     public void printForward() {
 
         Node<T> temp = head;
@@ -38,8 +47,12 @@ public class DoublyLinkedList<T> {
         System.out.println();
     }
 
-    // Print from last to first
+    // Print Backward
     public void printBackward() {
+
+        if (head == null) {
+            return;
+        }
 
         Node<T> temp = head;
 
@@ -48,7 +61,7 @@ public class DoublyLinkedList<T> {
             temp = temp.next;
         }
 
-        // Traverse backwards
+        // Traverse backward
         while (temp != null) {
 
             System.out.print(temp.data);
