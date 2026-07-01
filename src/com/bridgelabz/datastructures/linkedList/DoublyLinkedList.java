@@ -69,6 +69,31 @@ public class DoublyLinkedList<T> {
         }
     }
 
+    // Delete last node
+    public void popLast() {
+
+        if (head == null) {
+            System.out.println("Linked List is Empty.");
+            return;
+        }
+
+        // If only one node exists
+        if (head.next == null) {
+            head = null;
+            return;
+        }
+
+        // Traverse to the last node
+        Node<T> temp = head;
+
+        while (temp.next != null) {
+            temp = temp.next;
+        }
+
+        // Remove last node
+        temp.prev.next = null;
+    }
+
     // Print Forward
     public void printForward() {
 

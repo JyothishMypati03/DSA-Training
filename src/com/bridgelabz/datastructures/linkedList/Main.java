@@ -12,6 +12,8 @@ public class Main {
 
         list.pop();
 
+        list.popLast();
+
         System.out.println("Before Insertion:");
         list.printForward();
 

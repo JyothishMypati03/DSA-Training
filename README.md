@@ -1,15 +1,15 @@
-# Delete the First Node (Pop Operation) in Doubly Linked List
+#  Delete the Last Node (Pop Last Operation) in Doubly Linked List
 
 ## Description
 
-This project demonstrates how to delete the **first node (Head)** from a **Doubly Linked List** using Java Generics. After deleting the first node, the next node becomes the new head of the list.
+This project demonstrates how to delete the **last node (tail)** from a **Doubly Linked List** using Java Generics. After deleting the last node, the previous node becomes the new tail of the list.
 
 ## Objective
 
-- Understand the Pop operation in a Doubly Linked List.
-- Delete the first node from the list.
-- Update the Head node.
-- Maintain the `prev` and `next` references correctly.
+- Understand the Pop Last operation in a Doubly Linked List.
+- Delete the last node from the list.
+- Update the new tail node.
+- Maintain both `prev` and `next` references correctly.
 
 ## Technologies Used
 
@@ -31,7 +31,7 @@ src
 
 - Generic Node implementation
 - Append nodes to the list
-- Delete the first node (Pop)
+- Delete the last node (Pop Last)
 - Forward traversal
 - Backward traversal
 
@@ -42,17 +42,17 @@ list.append(56);
 list.append(30);
 list.append(70);
 
-list.pop();
+list.popLast();
 ```
 
 ## Output
 
 ```
-Before Deleting First Node:
+Before Deleting Last Node:
 56 <-> 30 <-> 70
 
-After Deleting First Node:
-30 <-> 70
+After Deleting Last Node:
+56 <-> 30
 
 Backward Traversal:
-70 <-> 30
+30 <-> 56
