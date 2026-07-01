@@ -1,59 +1,53 @@
-# Create a Simple Linked List
+# Doubly Linked List Using Java Generics
 
-## Problem Statement
+## Description
 
-Create a simple Linked List containing the values **56, 30, and 70** using Java.
-
----
+This project demonstrates the implementation of a **Doubly Linked List** from scratch using Java Generics. Each node stores data along with references to both the previous and next nodes, allowing traversal in both forward and backward directions.
 
 ## Objective
 
-- Understand the basic concept of a Linked List.
-- Create and initialize a Linked List.
-- Display the elements of the Linked List.
-
----
+- Understand the concept of a Doubly Linked List.
+- Implement a custom Doubly Linked List using Java.
+- Insert nodes at the beginning of the list.
+- Traverse the list in both forward and backward directions.
 
 ## Technologies Used
 
 - Java
 - Java Generics
-- LinkedList
+- Object-Oriented Programming (OOP)
 
----
-
-## Folder Structure
+## Project Structure
 
 ```
 src
-└── com.bridgelabz.datastructures
-    └── linkedlist
-        └── LinkedList.java
+└── com.bridgelabz.datastructures.linkedList
+    ├── Node.java
+    ├── DoublyLinkedList.java
+    └── Main.java
 ```
 
----
+## Features
 
-## Sample Code
+- Create a Doubly Linked List
+- Add nodes at the beginning
+- Forward traversal
+- Backward traversal
+- Generic implementation
+
+## Sample Input
 
 ```java
-LinkedList<Integer> list = new LinkedList<>(List.of(56, 30, 70));
-
-System.out.println(list);
+list.add(70);
+list.add(30);
+list.add(56);
 ```
-
----
 
 ## Output
 
 ```
-[56, 30, 70]
-```
+Forward Traversal:
+56 <-> 30 <-> 70
 
----
-
-## Concepts Covered
-
-- Linked List
-- Java Collections Framework
-- Java Generics
-- List.of()
+Backward Traversal:
+70 <-> 30 <-> 56
