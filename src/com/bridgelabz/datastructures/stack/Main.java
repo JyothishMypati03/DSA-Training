@@ -10,7 +10,17 @@ public class Main {
         stack.push(30);
         stack.push(56);
 
-        stack.printStack();
+        System.out.println("Top Element : " + stack.peek());
+
+        System.out.println("\nPopping Elements:");
+
+        while (!stack.isEmpty()) {
+
+            System.out.println(stack.pop());
+
+        }
+
+        System.out.println("\nStack is Empty");
     }
 
 

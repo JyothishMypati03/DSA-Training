@@ -55,18 +55,28 @@ public class DoublyLinkedList<T extends Comparable<T>> {
         temp.next = newNode;
     }
 
-    public void pop() {
+    // Return first element
+    public T peek() {
 
         if (head == null) {
-            System.out.println("Linked List is Empty.");
-            return;
+            return null;
         }
+
+        return head.data;
+    }
+
+    // Remove first element
+    public T pop() {
+
+        if (head == null) {
+            return null;
+        }
+
+        T data = head.data;
 
         head = head.next;
 
-        if (head != null) {
-            head.prev = null;
-        }
+        return data;
     }
 
     // Delete last node
@@ -92,6 +102,11 @@ public class DoublyLinkedList<T extends Comparable<T>> {
 
         // Remove last node
         temp.prev.next = null;
+    }
+
+    // Check list is empty
+    public boolean isEmpty() {
+        return head == null;
     }
 
     // Search a node

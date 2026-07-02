@@ -1,15 +1,15 @@
-# Create a Stack Using Linked List
+# Peek and Pop Elements from Stack
 
 ## Description
 
-This project demonstrates the implementation of a **Stack** using the existing **Linked List** implementation. The `push()` operation internally calls the `add()` method of the `LinkedList` class to insert elements at the beginning of the list, making the most recently added element the top of the stack.
+This project demonstrates how to perform **Peek** and **Pop** operations on a **Stack** using the existing **Linked List** implementation. The stack follows the **Last In, First Out (LIFO)** principle. The `peek()` operation returns the top element without removing it, while the `pop()` operation removes the top element. The elements are removed until the stack becomes empty.
 
 ## Objective
 
-- Understand the Stack data structure.
+- Understand the Peek operation.
+- Understand the Pop operation.
 - Reuse the existing Linked List implementation.
-- Implement the Push operation.
-- Understand the LIFO (Last In, First Out) principle.
+- Remove elements from the stack until it becomes empty.
 
 ## Technologies Used
 
@@ -34,9 +34,10 @@ src
 ## Features
 
 - Reuses the existing Linked List
-- Generic Stack implementation
 - Push operation
-- Stack traversal
+- Peek operation
+- Pop operation
+- Check if stack is empty
 - LIFO (Last In, First Out)
 
 ## Sample Input
@@ -45,11 +46,21 @@ src
 stack.push(70);
 stack.push(30);
 stack.push(56);
+
+stack.peek();
+
+while (!stack.isEmpty()) {
+    System.out.println(stack.pop());
+}
 ```
 
 ## Output
 
 ```
-Stack:
-56 -> 30 -> 70
-```
+Top Element: 56
+
+56
+30
+70
+
+Stack is Empty
