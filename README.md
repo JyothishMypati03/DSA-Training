@@ -1,52 +1,55 @@
-#  Create a Sorted Linked List
+# Create a Stack Using Linked List
 
 ## Description
 
-This project demonstrates the implementation of a **Sorted Linked List** using Java Generics. The linked list automatically inserts each element in **ascending order** during the insertion operation.
+This project demonstrates the implementation of a **Stack** using the existing **Linked List** implementation. The `push()` operation internally calls the `add()` method of the `LinkedList` class to insert elements at the beginning of the list, making the most recently added element the top of the stack.
 
 ## Objective
 
-- Understand the concept of a Sorted Linked List.
-- Insert elements in ascending order automatically.
-- Use Java Generics with the `Comparable` interface.
-- Maintain the sorted order after every insertion.
+- Understand the Stack data structure.
+- Reuse the existing Linked List implementation.
+- Implement the Push operation.
+- Understand the LIFO (Last In, First Out) principle.
 
 ## Technologies Used
 
 - Java
 - Java Generics
-- Comparable Interface
 - Object-Oriented Programming (OOP)
 
 ## Project Structure
 
 ```
 src
-└── com.bridgelabz.datastructures.sortedlinkedlist
-    ├── Node.java
-    ├── SortedLinkedList.java
-    └── Main.java
+└── com.bridgelabz.datastructures
+    ├── linkedlist
+    │   ├── Node.java
+    │   └── LinkedList.java
+    │
+    └── stack
+        ├── Stack.java
+        └── Main.java
 ```
 
 ## Features
 
-- Generic Node implementation
-- Sorted insertion
-- Automatic ascending order
-- Linked List traversal
-- Custom Sorted Linked List implementation
+- Reuses the existing Linked List
+- Generic Stack implementation
+- Push operation
+- Stack traversal
+- LIFO (Last In, First Out)
 
 ## Sample Input
 
 ```java
-list.add(56);
-list.add(30);
-list.add(40);
-list.add(70);
+stack.push(70);
+stack.push(30);
+stack.push(56);
 ```
 
 ## Output
 
 ```
-Sorted Linked List:
-30 -> 40 -> 56 -> 70
+Stack:
+56 -> 30 -> 70
+```
