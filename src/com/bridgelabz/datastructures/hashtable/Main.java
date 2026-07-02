@@ -4,25 +4,25 @@ public class Main {
 
     public static void main(String[] args) {
 
-        String sentence = "To be or not to be";
+        String sentence = "Paranoids are not paranoid because they are paranoid but because they keep putting themselves deliberately into paranoid avoidable situations";
 
         String[] words = sentence.toLowerCase().split(" ");
 
-        LinkedList<String, Integer> list = new LinkedList<>();
+        MyHashMap<String, Integer> hashMap = new MyHashMap<>();
 
         for (String word : words) {
 
-            Node<String, Integer> node = list.search(word);
+            Integer count = hashMap.get(word);
 
-            if (node == null) {
-                list.add(word, 1);
+            if (count == null) {
+                hashMap.add(word, 1);
             } else {
-                node.setValue(node.getValue() + 1);
+                hashMap.add(word, count + 1);
             }
         }
 
-        System.out.println("Word Frequencies:");
+        System.out.println("Word Frequencies:\n");
 
-        list.print();
+        hashMap.print();
     }
 }

@@ -1,13 +1,17 @@
 package com.bridgelabz.datastructures.hashtable;
 
 
-    public interface INode<K> {
+public interface INode<K> {
 
-        K getKey();
+    // Get the key
+    K getKey();
 
-        void setKey(K key);
+    // Set the key
+    void setKey(K key);
 
-        INode<K> getNext();
+    // Get the next node
+    INode<K> getNext();
 
-        void setNext(INode<K> next);
+    // Set the next node
+    void setNext(INode<K> next);
 }
