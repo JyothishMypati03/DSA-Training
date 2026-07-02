@@ -67,3 +67,31 @@ situations : 1
 ```
 
 > **Note:** The output may appear in a different order because words are stored in different hash buckets.
+<<<<<<< Updated upstream
+=======
+
+## Concepts Covered
+
+- Hash Table
+- Hash Function
+- Bucket
+- Collision Handling
+- Separate Chaining
+- Linked List
+- Key-Value Pair
+- Java Generics
+
+## Learning Outcome
+
+After completing this project, you will be able to:
+
+- Implement a custom Hash Table from scratch.
+- Use hash functions to map keys into buckets.
+- Handle collisions using Linked Lists.
+- Store and retrieve Key-Value pairs efficiently.
+- Count the frequency of words using a Hash Table.
+
+## Author
+
+**Jyothish Mypati**
+>>>>>>> Stashed changes
