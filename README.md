@@ -1,15 +1,15 @@
-# Peek and Pop Elements from Stack
+# Create a Queue Using Linked List
 
 ## Description
 
-This project demonstrates how to perform **Peek** and **Pop** operations on a **Stack** using the existing **Linked List** implementation. The stack follows the **Last In, First Out (LIFO)** principle. The `peek()` operation returns the top element without removing it, while the `pop()` operation removes the top element. The elements are removed until the stack becomes empty.
+This project demonstrates the implementation of a **Queue** using the existing **Linked List** implementation. The `enqueue()` operation internally calls the `append()` method of the `LinkedList` class to insert elements at the end of the list. The queue follows the **FIFO (First In, First Out)** principle.
 
 ## Objective
 
-- Understand the Peek operation.
-- Understand the Pop operation.
+- Understand the Queue data structure.
 - Reuse the existing Linked List implementation.
-- Remove elements from the stack until it becomes empty.
+- Implement the Enqueue operation.
+- Understand the FIFO (First In, First Out) principle.
 
 ## Technologies Used
 
@@ -22,45 +22,34 @@ This project demonstrates how to perform **Peek** and **Pop** operations on a **
 ```
 src
 └── com.bridgelabz.datastructures
-    ├── linkedlist
+    ├── Doublylinkedlist
     │   ├── Node.java
     │   └── LinkedList.java
     │
-    └── stack
-        ├── Stack.java
+    └── queue
+        ├── Queue.java
         └── Main.java
 ```
 
 ## Features
 
 - Reuses the existing Linked List
-- Push operation
-- Peek operation
-- Pop operation
-- Check if stack is empty
-- LIFO (Last In, First Out)
+- Generic Queue implementation
+- Enqueue operation
+- Queue traversal
+- FIFO (First In, First Out)
 
 ## Sample Input
 
 ```java
-stack.push(70);
-stack.push(30);
-stack.push(56);
-
-stack.peek();
-
-while (!stack.isEmpty()) {
-    System.out.println(stack.pop());
-}
+queue.enqueue(56);
+queue.enqueue(30);
+queue.enqueue(70);
 ```
 
 ## Output
 
 ```
-Top Element: 56
-
-56
-30
-70
-
-Stack is Empty
+Queue:
+56 -> 30 -> 70
+```
