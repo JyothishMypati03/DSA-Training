@@ -1,15 +1,16 @@
-# Queue Dequeue Elements from Queue
+# Hash Table UC1 - Find Frequency of Words in a Sentence
 
 ## Description
 
-This project demonstrates the implementation of the **Dequeue** operation using the existing **Linked List** implementation. The `dequeue()` operation internally calls the `pop()` method of the `LinkedList` class to remove the first element from the queue. The queue follows the **FIFO (First In, First Out)** principle.
+This project demonstrates how to find the frequency of words in a sentence using a custom **Hash Table** implementation based on a **Linked List**. Each word is stored as a **key**, and its occurrence count is stored as the **value** using a custom `Node<K, V>` class.
 
 ## Objective
 
-- Understand the Dequeue operation.
-- Reuse the existing Linked List implementation.
-- Remove elements from the front of the queue.
-- Understand the FIFO (First In, First Out) principle.
+- Understand the concept of a Hash Table.
+- Store data as Key-Value pairs.
+- Count the frequency of words in a sentence.
+- Use a Linked List to store Key-Value pairs.
+- Search for an existing key and update its value.
 
 ## Technologies Used
 
@@ -21,42 +22,33 @@ This project demonstrates the implementation of the **Dequeue** operation using 
 
 ```
 src
-└── com.bridgelabz.datastructures
-    ├── Doublylinkedlist
-    │   ├── Node.java
-    │   └── LinkedList.java
-    │
-    └── queue
-        ├── Queue.java
-        └── Main.java
+└── com.bridgelabz.datastructures.hashtable
+    ├── INode.java
+    ├── Node.java
+    ├── LinkedList.java
+    └── Main.java
 ```
 
 ## Features
 
-- Reuses the existing Linked List
-- Enqueue operation
-- Dequeue operation
-- Queue traversal
-- FIFO (First In, First Out)
+- Generic Node implementation
+- Key-Value pair storage
+- Linked List implementation
+- Search operation
+- Word frequency counting
 
 ## Sample Input
 
 ```java
-queue.enqueue(56);
-queue.enqueue(30);
-queue.enqueue(70);
-
-queue.dequeue();
+String sentence = "To be or not to be";
 ```
 
 ## Output
 
 ```
-Queue Before Dequeue:
-56 -> 30 -> 70
+Word Frequencies:
 
-Dequeued Element: 56
-
-Queue After Dequeue:
-30 -> 70
-```
+to : 2
+be : 2
+or : 1
+not : 1
